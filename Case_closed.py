@@ -4,25 +4,25 @@ import joblib
 from preprocess import preprocess_input
 model = joblib.load("Case Status.pkl")
 st.title("Crimes Data")
-AREA = st.number_input("Enter AREA")
+area= st.number_input("Enter AREA")
 Part = st.number_input("Enter Part 1-2")
 Crm_Cd = st.number_input("Enter Crm Cd")
 Crm_Cd_Desc = st.number_input("Enter Crm Cd Desc")
 Vict_Sex = st.number_input("Enter Vict Sex")
 Vict_Descent = st.number_input("Enter Vict Descent")
 Premis_Desc = st.number_input("Enter Premis Desc")
-LOCATION = st.number_input("Enter LOCATION")
+location = st.number_input("Enter LOCATION")
 Day_of_Week = st.number_input("Enter Day of Week")
 
 manual_input = pd.DataFrame({
-  'AREA' = ['AREA'],
+  'AREA' = ['area'],
   'Part 1-2' = ['Part'],
   'Crm Cd' = ['Crm_Cd'],
   'Crm Cd Desc' = ['Crm_Cd_Desc'],
   'Vict Sex' = ['Vict_Sex'],
   'Vict Descent' = ['Vict_Descent'],
   'Premis Desc' = ['Premis_Desc'],
-  'LOCATION' = ['LOCATION'],
+  'LOCATION' = ['location'],
   'Day of Week' = ['Day_of_Week']
 })
 st.write("Input Summary",manual_input)
