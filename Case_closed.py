@@ -15,16 +15,17 @@ location = st.number_input("Enter LOCATION")
 Day_of_Week = st.number_input("Enter Day of Week")
 
 manual_input = pd.DataFrame({
-  'AREA' = ['area'],
-  'Part 1-2' = ['Part'],
-  'Crm Cd' = ['Crm_Cd'],
-  'Crm Cd Desc' = ['Crm_Cd_Desc'],
-  'Vict Sex' = ['Vict_Sex'],
-  'Vict Descent' = ['Vict_Descent'],
-  'Premis Desc' = ['Premis_Desc'],
-  'LOCATION' = ['location'],
-  'Day of Week' = ['Day_of_Week']
+  'AREA': [area],
+  'Part 1-2': [Part],
+  'Crm Cd': [Crm_Cd],
+  'Crm Cd Desc': [Crm_Cd_Desc],
+  'Vict Sex': [Vict_Sex],
+  'Vict Descent': [Vict_Descent],
+  'Premis Desc': [Premis_Desc],
+  'LOCATION': [location],
+  'Day of Week': [Day_of_Week]
 })
+
 st.write("Input Summary",manual_input)
 if st.button("Predict case"):
         processed_manual = preprocess_input(manual_input)
