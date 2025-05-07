@@ -6,24 +6,24 @@ model = joblib.load("Case Status.pkl")
 st.title("Crimes Data")
 AREA = st.number_input("Enter AREA")
 Part = st.number_input("Enter Part 1-2")
-Crm Cd = st.number_input("Enter Crm Cd")
-Crm Cd Desc = st.number_input("Enter Crm Cd Desc")
-Vict Sex = st.number_input("Enter Vict Sex")
-Vict Descent = st.number_input("Enter Vict Descent")
-Premis Desc = st.number_input("Enter Premis Desc")
+Crm_Cd = st.number_input("Enter Crm Cd")
+Crm_Cd_Desc = st.number_input("Enter Crm Cd Desc")
+Vict_Sex = st.number_input("Enter Vict Sex")
+Vict_Descent = st.number_input("Enter Vict Descent")
+Premis_Desc = st.number_input("Enter Premis Desc")
 LOCATION = st.number_input("Enter LOCATION")
-Day of Week = st.number_input("Enter Day of Week")
+Day_of_Week = st.number_input("Enter Day of Week")
 
 manual_input = pd.DataFrame({
   'AREA' = ['AREA'],
   'Part 1-2' = ['Part'],
-  'Crm Cd' = ['Crm Cd'],
-  'Crm Cd Desc' = ['Crm Cd Desc'],
-  'Vict Sex' = ['Vict Sex'],
-  'Vict Descent' = ['Vict Descent'],
-  'Premis Desc' = ['Premis Desc'],
+  'Crm Cd' = ['Crm_Cd'],
+  'Crm Cd Desc' = ['Crm_Cd_Desc'],
+  'Vict Sex' = ['Vict_Sex'],
+  'Vict Descent' = ['Vict_Descent'],
+  'Premis Desc' = ['Premis_Desc'],
   'LOCATION' = ['LOCATION'],
-  'Day of Week' = ['Day of Week']
+  'Day of Week' = ['Day_of_Week']
 })
 st.write("Input Summary",manual_input)
 if st.button("Predict case"):
